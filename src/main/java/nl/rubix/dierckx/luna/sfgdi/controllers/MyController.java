@@ -1,13 +1,18 @@
 package nl.rubix.dierckx.luna.sfgdi.controllers;
 
+import nl.rubix.dierckx.luna.sfgdi.services.GreetingService;
 import org.springframework.stereotype.Controller;
 
 @Controller
 public class MyController {
 
-    public String sayHello() {
-        System.out.println("Hello world!");
+    private final GreetingService greetingService;
 
-        return "Hi! :D";
+    public MyController(GreetingService greetingService) {
+        this.greetingService = greetingService;
+    }
+
+    public String sayHello() {
+        return greetingService.sayGreeting();
     }
 }
