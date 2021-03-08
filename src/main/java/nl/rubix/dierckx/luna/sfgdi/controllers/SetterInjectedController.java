@@ -1,11 +1,15 @@
 package nl.rubix.dierckx.luna.sfgdi.controllers;
 
 import nl.rubix.dierckx.luna.sfgdi.services.GreetingService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 
+@Controller
 public class SetterInjectedController {
 
     private GreetingService greetingService;
 
+    @Autowired
     public void setGreetingService(GreetingService greetingService) {
         this.greetingService = greetingService;
     }
