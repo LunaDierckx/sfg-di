@@ -1,7 +1,5 @@
 package nl.rubix.dierckx.luna.pets.config;
 
-import nl.rubix.dierckx.luna.pets.CatPetService;
-import nl.rubix.dierckx.luna.pets.DogPetService;
 import nl.rubix.dierckx.luna.pets.PetService;
 import nl.rubix.dierckx.luna.pets.PetServiceFactory;
 import org.springframework.context.annotation.Bean;
