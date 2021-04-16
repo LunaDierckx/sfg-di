@@ -1,4 +1,4 @@
-package nl.rubix.dierckx.luna.sfgdi.services;
+package nl.rubix.dierckx.luna.pets;
 
 public interface PetService {
 

@@ -1,6 +1,6 @@
 package nl.rubix.dierckx.luna.sfgdi.controllers;
 
-import nl.rubix.dierckx.luna.sfgdi.services.PetService;
+import nl.rubix.dierckx.luna.pets.PetService;
 import org.springframework.stereotype.Controller;
 
 @Controller
