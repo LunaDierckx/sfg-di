@@ -3,11 +3,9 @@ package nl.rubix.dierckx.luna.sfgdi.config;
 import nl.rubix.dierckx.luna.sfgdi.repositories.EnglishGreetingRepository;
 import nl.rubix.dierckx.luna.sfgdi.repositories.EnglishGreetingRepositoryImpl;
 import nl.rubix.dierckx.luna.sfgdi.services.*;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Primary;
-import org.springframework.context.annotation.Profile;
+import org.springframework.context.annotation.*;
 
+@ImportResource("classpath:sfgdi-config.xml")
 @Configuration
 public class GreetingServiceConfig {
 
@@ -34,10 +32,10 @@ public class GreetingServiceConfig {
         return new I18NDutchGreetingService();
     }
 
-    @Bean
-    ConstructorGreetingService constructorGreetingService(){
-        return new ConstructorGreetingService();
-    }
+//    @Bean
+//    ConstructorGreetingService constructorGreetingService(){
+//        return new ConstructorGreetingService();
+//    }
 
     @Bean
     PropertyGreetingService propertyGreetingService() {
