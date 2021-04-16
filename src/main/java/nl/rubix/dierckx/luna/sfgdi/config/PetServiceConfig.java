@@ -1,4 +1,4 @@
-package nl.rubix.dierckx.luna.pets.config;
+package nl.rubix.dierckx.luna.sfgdi.config;
 
 import nl.rubix.dierckx.luna.pets.PetService;
 import nl.rubix.dierckx.luna.pets.PetServiceFactory;
