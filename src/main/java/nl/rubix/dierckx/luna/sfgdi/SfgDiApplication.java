@@ -1,5 +1,6 @@
 package nl.rubix.dierckx.luna.sfgdi;
 
+import nl.rubix.dierckx.luna.sfgdi.config.SfgConfiguration;
 import nl.rubix.dierckx.luna.sfgdi.controllers.*;
 import nl.rubix.dierckx.luna.sfgdi.datasource.FakeDataSource;
 import nl.rubix.dierckx.luna.sfgdi.services.PrototypeBean;
@@ -51,10 +52,18 @@ public class SfgDiApplication {
         PrototypeBean prototypeBean2 = ctx.getBean(PrototypeBean.class);
         System.out.println(prototypeBean2.getMyScope());
 
+        System.out.println("-------- Fake Data Source");
         FakeDataSource fakeDataSource = ctx.getBean(FakeDataSource.class);
         System.out.println(fakeDataSource.getUsername());
         System.out.println(fakeDataSource.getPassword());
         System.out.println(fakeDataSource.getJdbcurl());
+
+        System.out.println("-------- Config Props Bean");
+        SfgConfiguration sfgConfiguration = ctx.getBean(SfgConfiguration.class);
+        System.out.println(sfgConfiguration.getUsername());
+        System.out.println(sfgConfiguration.getPassword());
+        System.out.println(sfgConfiguration.getJdbcurl());
+
     }
 
 }
