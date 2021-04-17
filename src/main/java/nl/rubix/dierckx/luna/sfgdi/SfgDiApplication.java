@@ -1,6 +1,7 @@
 package nl.rubix.dierckx.luna.sfgdi;
 
 import nl.rubix.dierckx.luna.sfgdi.config.SfgConfiguration;
+import nl.rubix.dierckx.luna.sfgdi.config.SfgConstructorConfig;
 import nl.rubix.dierckx.luna.sfgdi.controllers.*;
 import nl.rubix.dierckx.luna.sfgdi.datasource.FakeDataSource;
 import nl.rubix.dierckx.luna.sfgdi.services.PrototypeBean;
@@ -64,6 +65,11 @@ public class SfgDiApplication {
         System.out.println(sfgConfiguration.getPassword());
         System.out.println(sfgConfiguration.getJdbcurl());
 
+        System.out.println("-------- Constructor Binding");
+        SfgConstructorConfig sfgConstructorConfig = ctx.getBean(SfgConstructorConfig.class);
+        System.out.println(sfgConstructorConfig.getUsername());
+        System.out.println(sfgConstructorConfig.getPassword());
+        System.out.println(sfgConstructorConfig.getJdbcurl());
     }
 
 }
